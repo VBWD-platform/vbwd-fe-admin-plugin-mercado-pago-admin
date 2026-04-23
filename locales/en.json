@@ -1,0 +1,18 @@
+{
+  "mercadoPagoAdmin": {
+    "payments": {
+      "title": "Mercado Pago payments",
+      "loading": "Loading…",
+      "empty": "No Mercado Pago payments yet.",
+      "allCountries": "All countries",
+      "invoiceNo": "Invoice",
+      "country": "Country",
+      "amount": "Amount",
+      "method": "Method",
+      "installments": "Installments",
+      "status": "Status",
+      "mpPaymentId": "MP payment ID",
+      "refund": "Refund"
+    }
+  }
+}
