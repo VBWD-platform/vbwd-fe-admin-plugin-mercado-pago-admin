@@ -3,15 +3,33 @@
     <header>
       <h2>{{ $t('mercadoPagoAdmin.payments.title') }}</h2>
       <select v-model="countryFilter">
-        <option value="">{{ $t('mercadoPagoAdmin.payments.allCountries') }}</option>
-        <option v-for="c in countries" :key="c" :value="c">{{ c }}</option>
+        <option value="">
+          {{ $t('mercadoPagoAdmin.payments.allCountries') }}
+        </option>
+        <option
+          v-for="c in countries"
+          :key="c"
+          :value="c"
+        >
+          {{ c }}
+        </option>
       </select>
     </header>
 
-    <div v-if="loading">{{ $t('mercadoPagoAdmin.payments.loading') }}</div>
-    <div v-else-if="error" class="error">{{ error }}</div>
+    <div v-if="loading">
+      {{ $t('mercadoPagoAdmin.payments.loading') }}
+    </div>
+    <div
+      v-else-if="error"
+      class="error"
+    >
+      {{ error }}
+    </div>
 
-    <table v-else-if="filteredPayments.length > 0" class="txtable">
+    <table
+      v-else-if="filteredPayments.length > 0"
+      class="txtable"
+    >
       <thead>
         <tr>
           <th>{{ $t('mercadoPagoAdmin.payments.invoiceNo') }}</th>
@@ -21,11 +39,14 @@
           <th>{{ $t('mercadoPagoAdmin.payments.installments') }}</th>
           <th>{{ $t('mercadoPagoAdmin.payments.status') }}</th>
           <th>{{ $t('mercadoPagoAdmin.payments.mpPaymentId') }}</th>
-          <th></th>
+          <th />
         </tr>
       </thead>
       <tbody>
-        <tr v-for="p in filteredPayments" :key="p.id">
+        <tr
+          v-for="p in filteredPayments"
+          :key="p.id"
+        >
           <td>{{ p.invoice_no }}</td>
           <td>{{ p.country }}</td>
           <td>{{ p.amount }} {{ p.currency }}</td>
@@ -48,7 +69,12 @@
       </tbody>
     </table>
 
-    <div v-else class="empty">{{ $t('mercadoPagoAdmin.payments.empty') }}</div>
+    <div
+      v-else
+      class="empty"
+    >
+      {{ $t('mercadoPagoAdmin.payments.empty') }}
+    </div>
   </div>
 </template>
 
