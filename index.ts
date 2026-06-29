@@ -2,7 +2,7 @@ import type { IPlugin, IPlatformSDK } from 'vbwd-view-component';
 
 export const mercadoPagoAdminPlugin: IPlugin = {
   name: 'mercado-pago-admin',
-  version: '1.0.0',
+  version: '26.6',
   description:
     'Mercado Pago admin — payments list + per-country filter + refund',
 
